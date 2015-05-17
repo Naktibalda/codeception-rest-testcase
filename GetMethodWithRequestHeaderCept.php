@@ -1,6 +1,6 @@
 <?php 
 $I = new FunctionalTester($scenario);
-$I->wantTo('make GET request with custom reques header');
+$I->wantTo('make GET request with custom request header');
 $I->haveHttpHeader('X-Auth-Token', 'verySecureToken');
 $I->sendGET('/rest');
 
