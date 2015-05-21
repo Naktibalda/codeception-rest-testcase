@@ -1,9 +1,9 @@
 <?php 
 $I = new FunctionalTester($scenario);
-$I->wantTo('make GET request');
-$I->sendGET('/rest');
+$I->wantTo('pass request uri');
+$I->sendGET('/rest?param=value&param2=value2');
 $I->seeResponseIsJson();
 $expectedResponse = array(
-    'requestMethod' => 'GET',
+    'requestUri' => '/rest?param=value&param2=value2',
 );
 $I->seeResponseContainsJson($expectedResponse);
