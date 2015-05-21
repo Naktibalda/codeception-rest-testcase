@@ -7,8 +7,6 @@ $I->sendGET('/rest');
 $expectedResponse = array(
     'requestMethod' => 'GET',
     'queryParams' => array(),
-    'headers' => array(
-        'X_AUTH_TOKEN' => 'verySecureToken',
-    ),
+    'X-Auth-Token' => 'verySecureToken',
 );
 $I->seeResponseContainsJson($expectedResponse);
