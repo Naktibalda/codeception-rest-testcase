@@ -6,6 +6,7 @@ $I->seeResponseIsJson();
 
 $expectedResponse = [
     'requestMethod' => 'GET',
+    'requestUri' => '/rest?param1=value1&param2=value2',
     'queryParams' => [
         'param1' => 'value1',
         'param2' => 'value2',
