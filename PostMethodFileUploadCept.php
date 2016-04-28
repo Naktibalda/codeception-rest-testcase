@@ -7,6 +7,7 @@ $I->sendPOST('/rest', [], ['dump' => [
         'type' => 'text/plain',
         'size' => 57,
         'tmp_name' => codecept_data_dir('dump.sql'),
+        'error' => 0,
     ],
 ]);
 $I->seeResponseIsJson();
